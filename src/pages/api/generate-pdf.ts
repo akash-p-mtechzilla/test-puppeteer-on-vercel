@@ -98,6 +98,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 export const config = {
+  maxDuration: 60,
   api: {
     bodyParser: {
       sizeLimit: "10mb",
@@ -105,3 +106,4 @@ export const config = {
     responseLimit: "10mb",
   },
 };
+
