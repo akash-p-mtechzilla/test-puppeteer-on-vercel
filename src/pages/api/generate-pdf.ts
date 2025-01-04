@@ -13,8 +13,9 @@ const getOptions = async () => {
     };
   }
 
+
   return {
-    args: chromium.args,
+    args: [...chromium.args, "--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],
     defaultViewport: chromium.defaultViewport,
     executablePath: await chromium.executablePath(),
     headless: true,
@@ -49,8 +50,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       throw new Error("Failed to create new page");
     }
 
-    //page.setDefaultNavigationTimeout(30000);
-    //page.setDefaultTimeout(30000);
+    page.setDefaultNavigationTimeout(30000);
+    page.setDefaultTimeout(30000);
 
     await page.setViewport({
       width: 1200,
