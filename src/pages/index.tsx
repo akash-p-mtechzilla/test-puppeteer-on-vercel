@@ -79,7 +79,7 @@ export default function Home() {
 
             <button className={styles.secondary}
               onClick={async () => {
-                const blob = await downloadPdf("https://unsplash.com/s/photos/mysore");
+                const blob = await downloadPdf("https://www.google.com");
                 const url = URL.createObjectURL(blob);
                 const link = document.createElement("a");
                 link.href = url;

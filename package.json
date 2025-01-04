@@ -11,9 +11,10 @@
   "dependencies": {
     "react": "^18",
     "react-dom": "^18",
+    "@sparticuz/chromium": "^131.0.1",
     "next": "14.2.12",
-    "puppeteer-core": "^23.11.1",
-    "@sparticuz/chromium": "^131.0.1"
+    "puppeteer": "^23.11.1",
+    "puppeteer-core": "^23.11.1"
   },
   "devDependencies": {
     "typescript": "^5",
